@@ -47,6 +47,7 @@ namespace VideoBackgroundUWP
             {
                 // Create a Frame to act as the navigation context and navigate to the first page
                 rootFrame = new Frame();
+                rootFrame.Style = Resources["RootFrameStyle"] as Style;
 
                 rootFrame.NavigationFailed += OnNavigationFailed;
 

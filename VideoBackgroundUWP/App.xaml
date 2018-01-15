@@ -4,5 +4,18 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:VideoBackgroundUWP"
     RequestedTheme="Light">
-
+    <Application.Resources>
+        <Style  x:Key="RootFrameStyle" TargetType="Frame">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Frame">
+                        <Grid>
+                            <MediaElement AutoPlay="True" IsLooping="True" Source="ms-appx:///Assets/Background.mp4" Stretch="UniformToFill" />
+                            <ContentPresenter />
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Application.Resources>
 </Application>
